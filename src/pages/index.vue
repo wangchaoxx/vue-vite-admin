@@ -1,3 +1,3 @@
 <template>
-  <RouterView />
+  1212
 </template>
