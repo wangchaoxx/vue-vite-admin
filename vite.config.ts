@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
-// https://github.com/posva/unplugin-vue-router
-import VueRouter from 'unplugin-vue-router/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
@@ -24,12 +22,11 @@ export default defineConfig({
         }),
       },
     }),
-    VueRouter(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
         'vue',
-        '@vueuse/core'
+        '@vueuse/core',
       ],
       dts: true,
       dirs: [
@@ -49,8 +46,8 @@ export default defineConfig({
       ...Vue(),
       // https://github.com/vitejs/vite-plugin-vue/issues/74
       apply: (config) => {
-        return config.mode === "test";
+        return config.mode === 'test'
       },
-    }
+    },
   ],
 })
