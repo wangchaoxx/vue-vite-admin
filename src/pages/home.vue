@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const a = ref(null);
 
-console.log(a,'aaaa111');
+console.log(a,'aaaa');
 
 defineOptions({
   name: 'HomePage',
