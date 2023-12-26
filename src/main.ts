@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import './style.css'
+import 'virtual:uno.css'
+
 import App from './App.vue'
 const router = createRouter({
   history: createWebHashHistory(),

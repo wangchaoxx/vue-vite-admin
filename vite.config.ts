@@ -6,10 +6,12 @@ import VueRouter from 'unplugin-vue-router/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    UnoCSS(),
     VueMacros({
       defineOptions: false,
       defineModels: false,
@@ -27,6 +29,7 @@ export default defineConfig({
     AutoImport({
       imports: [
         'vue',
+        '@vueuse/core',
         VueRouterAutoImports,
         {
           // add any other imports you were relying on
@@ -45,7 +48,8 @@ export default defineConfig({
       dts: true,
     }),
 
-    {...Vue(),
+    {
+      ...Vue(),
       // https://github.com/vitejs/vite-plugin-vue/issues/74
       apply: (config) => {
         return config.mode === "test";
