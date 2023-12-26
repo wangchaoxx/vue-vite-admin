@@ -1,5 +1,11 @@
 <script lang="ts" setup>
+const a = ref(null);
 
+console.log(a,'aaaa');
+
+defineOptions({
+  name: 'HomePage',
+})
 </script>
 
 <template>
