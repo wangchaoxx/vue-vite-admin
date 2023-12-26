@@ -2,6 +2,7 @@
 defineOptions({
   name: 'HomePage',
 })
+console.log('---')
 </script>
 
 <template>
