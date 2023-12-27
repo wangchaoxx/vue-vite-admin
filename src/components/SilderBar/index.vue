@@ -4,44 +4,32 @@ import {
   Location,
 } from '@element-plus/icons-vue'
 
-function handleOpen() {
-}
-function handleClose() {
-}
+import { routes } from '~/router/routes'
 </script>
 
 <template>
   <el-menu
-    default-active="2"
+    active-text-color="#ffd04b"
+    background-color="#545c64"
+    default-active="/"
+    text-color="#fff"
     class="va-menu"
-    @open="handleOpen"
-    @close="handleClose"
+    router
   >
-    <el-menu-item index="4">
-      <el-icon><IconMenu /></el-icon>
-      <span>dashboard</span>
-    </el-menu-item>
-    <el-sub-menu index="1">
-      <template #title>
-        <el-icon><Location /></el-icon>
-        <span>Navigator One</span>
-      </template>
-      <el-menu-item-group title="Group One">
-        <el-menu-item index="1-1">
-          item one
-        </el-menu-item>
-        <el-menu-item index="1-2">
-          item two
-        </el-menu-item>
-      </el-menu-item-group>
-      <el-sub-menu index="1-4">
+    <template v-for="route in routes" :key="route.path">
+      <el-menu-item v-if="!route.children" :index="route.path">
+        <el-icon><IconMenu /></el-icon>
+        <span>{{ route.name }}</span>
+      </el-menu-item>
+      <el-sub-menu v-if="route.children" :index="route.path">
         <template #title>
-          item four
+          <el-icon><Location /></el-icon>
+          <span>{{ route.name }}</span>
         </template>
-        <el-menu-item index="1-4-1">
-          item one
+        <el-menu-item v-for="child in route.children" :key="child.path" :index="route.path + child.path">
+          {{ child.name }}
         </el-menu-item>
       </el-sub-menu>
-    </el-sub-menu>
+    </template>
   </el-menu>
 </template>

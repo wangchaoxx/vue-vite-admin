@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({
-  name: 'AboutPage',
+  name: 'UserPage',
 })
 </script>
 
