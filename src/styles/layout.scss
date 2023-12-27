@@ -1,0 +1,13 @@
+.va-common-layout {
+  .vac-aside {
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.va-common-layout,
+.el-container {
+  width: 100%;
+  height: 100%;
+}
