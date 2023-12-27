@@ -18,9 +18,11 @@ declare module 'vue' {
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    Layout: typeof import('./src/components/Layout/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SilderBar: typeof import('./src/components/SilderBar/index.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
+    VaHeader: typeof import('./src/components/VaHeader/index.vue')['default']
   }
 }
