@@ -3,8 +3,6 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import chalk from 'chalk'
 
-const process = require('node:process')
-
 const msgPath = path.resolve('.git/COMMIT_EDITMSG')
 const msg = readFileSync(msgPath, 'utf-8').trim()
 
@@ -26,5 +24,6 @@ if (!commitRE.test(msg)) {
       )}\n\n${
       chalk.red('  See .github/commit-convention.md for more details.\n')}`,
   )
+  // eslint-disable-next-line node/prefer-global/process
   process.exit(1)
 }

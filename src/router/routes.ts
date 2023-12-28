@@ -2,6 +2,12 @@ import Layout from '~/components/Layout/index.vue'
 
 export const routes = [
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import('~/pages/login/index.vue'),
+    meta: { title: '登录' },
+  },
+  {
     path: '/',
     component: Layout,
     redirect: '/dashboard',

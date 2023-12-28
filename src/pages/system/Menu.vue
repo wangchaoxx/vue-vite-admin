@@ -6,7 +6,7 @@ defineOptions({
 
 <template>
   <div>
-    home
+    menu
   </div>
 </template>
 
