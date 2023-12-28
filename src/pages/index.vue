@@ -5,6 +5,8 @@ defineOptions({
 </script>
 
 <template>
-  <div>name：admin</div>
-  <SvgIcon icon-class="menu" />
+  <div>
+    <div>name：admin</div>
+    <SvgIcon icon-class="menu" />
+  </div>
 </template>

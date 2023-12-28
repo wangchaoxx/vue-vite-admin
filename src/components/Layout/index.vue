@@ -9,10 +9,19 @@
           <VaHeader />
         </el-header>
         <el-main>
-          <RouterView />
+          <router-view v-slot="{ Component }">
+            <transition name="fade" mode="out-in">
+              <component :is="Component" />
+            </transition>
+          </router-view>
         </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>
   </div>
 </template>
+
+
+<style lang="scss">
+@import './index.scss';
+</style>
