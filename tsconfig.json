@@ -12,6 +12,8 @@
       "~/*": ["./src/*"]
     },
     "resolveJsonModule": true,
+
+    "types": ["vite-plugin-svg-icons/client"],
     "allowImportingTsExtensions": true,
 
     /* Linting */

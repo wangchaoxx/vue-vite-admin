@@ -5,5 +5,6 @@ defineOptions({
 </script>
 
 <template>
-  <el-button>我是 ElButton</el-button>
+  <div>name：admin</div>
+  <SvgIcon icon-class="menu" />
 </template>

@@ -5,7 +5,9 @@
         <SiderBar />
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <VaHeader />
+        </el-header>
         <el-main>
           <RouterView />
         </el-main>

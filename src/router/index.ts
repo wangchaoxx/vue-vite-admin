@@ -7,7 +7,7 @@ const router = createRouter({
   routes,
 })
 router.beforeEach(async (to) => {
-  const isAuthenticated = false
+  const isAuthenticated = true
 
   if (
     // 检查用户是否已登录

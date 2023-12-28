@@ -24,6 +24,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SiderBar: typeof import('./src/components/SiderBar/index.vue')['default']
     SilderBar: typeof import('./src/components/SilderBar/index.vue')['default']
+    SvgIcon: typeof import('./src/components/SvgIcon/index.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     VaHeader: typeof import('./src/components/VaHeader/index.vue')['default']
   }

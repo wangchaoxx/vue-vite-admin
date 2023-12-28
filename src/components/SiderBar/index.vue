@@ -1,13 +1,6 @@
 <script lang="ts" setup>
-import {
-  Menu as IconMenu,
-  Location,
-} from '@element-plus/icons-vue'
-
 import { useRoute } from 'vue-router'
 import { routes } from '~/router/routes'
-
-console.log(routes)
 
 const route = useRoute()
 </script>
@@ -23,12 +16,12 @@ const route = useRoute()
   >
     <template v-for="route in routes" :key="route.path">
       <el-menu-item v-if="route.children && route.children.length === 1" :index="route.children[0].path">
-        <el-icon><IconMenu /></el-icon>
+        <SvgIcon :icon-class="route.children[0].meta.icon" class="icon-class"/>
         <span>{{ route.children[0].meta.title }}</span>
       </el-menu-item>
       <el-sub-menu v-if="route.children && route.path !== '/'" :index="route.path">
         <template #title>
-          <el-icon><Location /></el-icon>
+          <SvgIcon :icon-class="route.meta.icon" class="icon-class"/>
           <span>{{ route.meta.title }}</span>
         </template>
         <el-menu-item v-for="child in route.children" :key="child.path" :index="`${route.path}/${child.path}`">
@@ -38,3 +31,7 @@ const route = useRoute()
     </template>
   </el-menu>
 </template>
+
+<style lang="scss" scoped>
+  @import './index.scss';
+</style>
