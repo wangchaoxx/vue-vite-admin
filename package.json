@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint --ext .ts,.tsx,.vue,.js,.jsx src --fix",
-    "postinstall": "simple-git-hooks"
+    "lint": "eslint .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
