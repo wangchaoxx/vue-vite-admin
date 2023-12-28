@@ -6,7 +6,7 @@ defineOptions({
 
 <template>
   <div>
-    about
+    user
   </div>
 </template>
 

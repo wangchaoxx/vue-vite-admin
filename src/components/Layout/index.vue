@@ -2,7 +2,7 @@
   <div class="va-common-layout">
     <el-container>
       <el-aside class="vac-aside">
-        <SilderBar />
+        <SiderBar />
       </el-aside>
       <el-container>
         <el-header>Header</el-header>
