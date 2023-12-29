@@ -3,6 +3,15 @@ import { useRoute } from 'vue-router'
 import { routes } from '~/router/routes'
 
 const route = useRoute()
+
+console.log(route);
+
+import {useSettingsStore} from '~/stores/settings';
+
+const store = useSettingsStore()
+console.log(store);
+
+
 </script>
 
 <template>
@@ -13,6 +22,7 @@ const route = useRoute()
     text-color="#fff"
     class="va-menu"
     router
+    :collapse="store.isCollapse"
   >
     <template v-for="route in routes" :key="route.path">
       <el-menu-item v-if="route.children && route.children.length === 1" :index="route.children[0].path">
