@@ -15,7 +15,7 @@
     "@vueuse/core": "^10.7.0",
     "element-plus": "^2.4.4",
     "pinia": "^2.1.7",
-    "vue": "^3.3.11",
+    "vue": "^3.4.0",
     "vue-router": "4"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "@iconify-json/carbon": "^1.1.27",
     "@types/node": "^20.10.5",
     "@types/nprogress": "^0.2.3",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue": "^4.6.0",
     "chalk": "^5.3.0",
     "eslint": "^8.56.0",
     "eslint-plugin-format": "^0.1.0",
@@ -37,7 +37,7 @@
     "unplugin-vue-macros": "^2.7.6",
     "vite": "^5.0.8",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue-tsc": "^1.8.25"
+    "vue-tsc": "^1.8.27"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
